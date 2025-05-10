@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Alumni Sign Up</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      background-color: #f5f5f5;
+    }
+
+    .alumni-signup-container {
+      max-width: 500px;
+      margin: auto;
+      background: white;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    .alumni-signup-container h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .alumni-signup-form label {
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    .alumni-signup-form input,
+    .alumni-signup-form textarea {
+      width: 100%;
+      padding: 8px;
+      margin-top: 4px;
+      margin-bottom: 12px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    .alumni-signup-form button {
+      width: 100%;
+      padding: 10px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .alumni-signup-form button:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+  <div class="alumni-signup-container">
+    <h2>Alumni Sign Up</h2>
+    <form class="alumni-signup-form" id="alumniForm">
+      <label>Full Name:
+        <input type="text" name="name" required />
+      </label>
+      <label>Email:
+        <input type="email" name="email" required />
+      </label>
+      <label>Password:
+        <input type="password" name="password" required />
+      </label>
+      <label>Confirm Password:
+        <input type="password" name="confirmPassword" required />
+      </label>
+      <label>Graduation Year:
+        <input type="number" name="graduationYear" required />
+      </label>
+      <label>Branch:
+        <input type="text" name="branch" required />
+      </label>
+      <label>Current Job Role:
+        <input type="text" name="currentJob" />
+      </label>
+      <label>Company:
+        <input type="text" name="company" />
+      </label>
+      <label>LinkedIn Profile:
+        <input type="url" name="linkedin" />
+      </label>
+      <label>GitHub Profile:
+        <input type="url" name="github" />
+      </label>
+      <label>Bio:
+        <textarea name="bio" rows="3"></textarea>
+      </label>
+
+      <button type="submit">Register</button>
+    </form>
+  </div>
+
+  <script>
+    document.getElementById("alumniForm").addEventListener("submit", function (e) {
+      e.preventDefault();
+      const formData = {};
+      const inputs = this.querySelectorAll("input, textarea");
+
+      inputs.forEach((input) => {
+        formData[input.name] = input.value;
+      });
+
+      if (formData.password !== formData.confirmPassword) {
+        alert("Passwords do not match!");
+        return;
+      }
+
+      console.log("Alumni Registered:", formData);
+      alert("Alumni Registered Successfully!");
+
+      // Redirect to index.html
+      window.location.href = "index.html";
+    });
+  </script>
+</body>
+</html>
