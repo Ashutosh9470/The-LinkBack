@@ -1,57 +1,187 @@
- <!-- Profile Section -->
-      <section id="profile">
-        <div class="profile-header">
-          <img src="https://i.pravatar.cc/120" alt="User Photo" />
-          <div>
-            <h1>Jon Deek</h1>
-            <p>Final Year B.Tech | CSE Department</p>
-            <p>📍 VIT Vellore</p>
-          </div>
-        </div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Profile</title>
+  <style>
+    .profile-header {
+      display: flex;
+      gap: 30px;
+      align-items: center;
+      margin-bottom: 30px;
+    }
+    .profile-header img {
+      width: 120px;
+      border-radius: 50%;
+      border: 4px solid #4c1d95;
+    }
+    .profile-header h1 {
+      margin: 0;
+      font-size: 28px;
+      color: #4c1d95;
+    }
+    .profile-section {
+      margin-bottom: 30px;
+    }
+    .profile-section h2 {
+      font-size: 20px;
+      margin-bottom: 10px;
+      color: #333;
+    }
+    .profile-section ul {
+      list-style: none;
+      padding-left: 0;
+    }
+    .profile-section ul li {
+      margin-bottom: 8px;
+    }
+    a {
+      color: #4c1d95;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    .container-skills {
+      height: 600px;
+      width: 100%;
+      background-color: transparent;
+      font-family: sans-serif;
+      font-weight: 500;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .Education-box, .Skills-Box, .social-box, .achievement-box {
+      height: 200px;
+      width: 400px;
+      border-radius: 10px;
+      margin: 30px;
+      padding: 30px;
+      cursor: pointer;
+      transition: all 0.3s ease-in-out;
+      backdrop-filter: blur(8px);
+      box-shadow: 0 0 10px rgba(45, 26, 252, 0.4),
+                  0 0 10px rgba(45, 26, 252, 0.4),
+                  0 0 10px rgba(45, 26, 252, 0.4);
+    }
+    .social-icons a {
+      color: #ac2b2b;
+      font-size: 30px;
+      margin-right: 30px;
+      transition: 0.3s;
+    }
+    .social-icons a:hover {
+      color: #171313cc;
+    }
+  </style>
+</head>
+<body>
+  <section id="profile">
+    <div class="profile-header">
+      <img src="https://i.pravatar.cc/120" alt="User Photo" />
+      <div>
+        <h1 id="profileName">Loading...</h1>
+        <p id="profileBio">Loading bio...</p>
+        <p>📍 <span id="profileCollege">Loading college...</span></p>
+      </div>
+    </div>
 
-        <div class="profile-section bio">
-          <h2>About Me</h2>
-          <p>
-            Passionate about tech, design, and helping juniors achieve their goals. I've mentored 20+ students
-            in UI/UX, internships, and MS abroad prep.
-          </p>
-        </div>
-  
-<div class="container-skills">
+    <div class="container-skills">
+      <div class="profile-section education Education-box">
+        <h2 style="margin-left: 30%; font-size: 25px;">Education</h2>
+        <ul>
+          <li><strong>B.Tech in Computer Science</strong> – VIT Vellore (2021–2025)</li>
+          <li><strong>Class XII – CBSE</strong> – Delhi Public School (2020)</li>
+          <li><strong>Class X – CBSE</strong> – Delhi Public School (2018)</li>
+        </ul>
+      </div>
 
-        <div class="profile-section education Education-box">
-          <h2 style="margin-left: 30%; margin-top: -10px; font-size: 25px;">Education</h2>
-          <ul>
-            <li><strong>B.Tech in Computer Science</strong> – VIT Vellore (2021–2025)</li>
-            <li><strong>Class XII – CBSE</strong> – Delhi Public School (2020)</li>
-            <li><strong>Class X – CBSE</strong> – Delhi Public School (2018)</li>
-          </ul>
-        </div>
+      <div class="profile-section skills Skills-Box">
+        <h2 style="margin-left: 20%; font-size: 25px;">Skills & Interests</h2>
+        <p id="profileSkills1" style="margin-top: 20px;">Loading...</p>
+        <p id="profileSkills2" style="margin-top: 10px;">Loading...</p>
+      </div>
 
-        <div class="profile-section skills Skills-Box">
-          <h2 style="margin-left: 20%; margin-top: -10px; font-size: 25px;">Skills & Interests</h2>
-          <p style="margin-top: 20px;">💻 JavaScript, Python, UI/UX, Figma, ReactJS</p>
-          <p style="margin-top: 10px;">🎯 Hackathons, Design Thinking, Mentorship</p>
-        </div>
-        <div class="profile-section socials social-box">
-          <h2 style="margin-left: 30%; margin-top: -10px; font-size: 25px;">Social Links</h2>
-          <p>
-            🔗 <div class="social-icons">
-              <a style="margin-left: 20px;" href="https://www.facebook.com/share/1UGeyi45xi/"><i class="fab fa-facebook"></i></a>
-              <a href="#"><i class="fab fa-twitter"></i></a>
-              <a href="https://www.instagram.com/sonu.kr6042/"><i class="fab fa-instagram"></i></a>
-              <a href="https://www.linkedin.com/in/shardanand-kumar-0a3146326?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><i class="fab fa-linkedin"></i></a>
-          </div>
-          </p>
-        </div>
-
-        <div class="profile-section achievements achievement-box">
-          <h2 style="margin-left: 30%; margin-top: -10px; font-size: 25px;">Achievements</h2>
-          <ul>
-            <li>🏆 Winner - SIH Hackathon 2024</li>
-            <li>🎓 Mentor - UX Bootcamp '23</li>
-            <li>🌍 Exchange Program - NUS Singapore</li>
-          </ul>
+      <div class="profile-section socials social-box">
+        <h2 style="margin-left: 30%; font-size: 25px;">Social Links</h2>
+        <div class="social-icons" style="margin-top: 10px;">
+          <a href="https://www.facebook.com/share/1UGeyi45xi/"><i class="fab fa-facebook"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="https://www.instagram.com/sonu.kr6042/"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.linkedin.com/in/shardanand-kumar-0a3146326"><i class="fab fa-linkedin"></i></a>
         </div>
       </div>
-      </section>
+
+      <div class="profile-section achievements achievement-box">
+        <h2 style="margin-left: 30%; font-size: 25px;">Achievements</h2>
+        <ul id="profileAchievements">
+          <li>Loading...</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Firebase SDKs -->
+  <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore-compat.js"></script>
+
+  <script>
+    const firebaseConfig = {
+      apiKey: "YAIzaSyAGXT7TmyycD-TZV-RWu0nyr3PmeXLrgi8",
+      authDomain: "hackatron-7bb5a.firebaseapp.com",
+      projectId: "hackatron-7bb5a",
+      storageBucket: "hackatron-7bb5a.firebasestorage.app",
+      messagingSenderId: "458740684448",
+      appId: "Y1:458740684448:web:d939b3a15dbc8156afdbc5",
+      measurementId: "G-FMGQ66S333"
+
+    };
+
+    firebase.initializeApp(firebaseConfig);
+    const auth = firebase.auth();
+    const db = firebase.firestore();
+
+    auth.onAuthStateChanged((user) => {
+      if (user) {
+        const userRef = db.collection("users").doc(user.uid);
+        userRef.get().then((doc) => {
+          if (doc.exists) {
+            const data = doc.data();
+
+            document.getElementById("profileName").textContent = data.name || "No name";
+            document.getElementById("profileCollege").textContent = data.college || "No college";
+            document.getElementById("profileBio").textContent = data.bio || "No bio";
+            document.getElementById("profileSkills1").textContent = data.skills1 || "";
+            document.getElementById("profileSkills2").textContent = data.skills2 || "";
+
+            const achievementsList = document.getElementById("profileAchievements");
+            achievementsList.innerHTML = ""; // Clear existing list
+            (data.achievements || []).forEach((item) => {
+              const li = document.createElement("li");
+              li.textContent = item;
+              achievementsList.appendChild(li);
+            });
+          } else {
+            alert("No user data found!");
+          }
+        }).catch((error) => {
+          console.error("Error getting document:", error);
+        });
+      } else {
+        // Delay slightly to allow auth check to settle
+        setTimeout(() => {
+          if (!auth.currentUser) {
+            window.location.href = "/loginpage.html"; // Redirect if not logged in
+          }
+        }, 1000);
+      }
+    });
+  </script>
+
+  <!-- Font Awesome (for icons) -->
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</body>
+</html>
